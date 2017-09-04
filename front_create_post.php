@@ -12,8 +12,8 @@ Author URI: http://luiscordero29.com/
 		exit; // Exit if accessed directly.
 	}
 
-	include_once( 'includes/view.php' ); 
-	include_once( 'includes/model.php' ); 
+	include( 'includes/view.php' ); 
+	include( 'includes/model.php' ); 
 
 	function front_create_post_controller() {
 		ob_start();
@@ -23,3 +23,8 @@ Author URI: http://luiscordero29.com/
 	}
 
 	add_shortcode( 'front_create_post', 'front_create_post_controller' );
+
+	add_action( 'wp_enqueue_scripts', 'ajax_test_enqueue_scripts' );
+	function ajax_test_enqueue_scripts() {
+		wp_enqueue_script( 'post', plugins_url( '/includes/post.js', __FILE__ ), array('jquery'), '1.0', true );
+	}

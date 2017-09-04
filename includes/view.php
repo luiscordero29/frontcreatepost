@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 function front_create_post_view() {
 	?>
 		<section id="front_create_post_view" class="front_create_post">
-			<form action="<?php esc_url( $_SERVER['REQUEST_URI'] ); ?>" method="post">
+			<form action="" method="post">
                 <div class="row">
                 	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                         <div class="row">
@@ -32,7 +32,7 @@ function front_create_post_view() {
 		                    </div>
 		                    <div class="col-xs-12">
 		                        <label for="title">Titre de l'annonce <span class="red">*</span></label>
-		                        <input type="text" class="form-control" name="title" id="title" tabindex=3>
+		                        <input type="text" class="form-control" name="title" id="title" required tabindex=3>
 		                    </div>
 		                    <div class="col-xs-4">
 		                        <label for="iam">Je suis <span class="red">*</span></label>
@@ -56,7 +56,7 @@ function front_create_post_view() {
 		                    </div>
 		                    <div class="col-xs-12">
 		                        <label for="description">Description <span class="red">*</span></label>
-                    			<textarea class="form-control" name="description" id="description" rows="10" tabindex=7></textarea>
+                    			<textarea class="form-control" name="description" id="description" required rows="10" tabindex=7></textarea>
 		                    </div>
                         </div>
                     </div>
@@ -72,11 +72,11 @@ function front_create_post_view() {
 		                    </div>
 		                    <div class="col-xs-6">
 		                        <label for="phone_1">Téléphone 1 <span class="red">*</span></label>
-		                        <input type="text" class="form-control" name="phone_1" id="phone_1" tabindex=10>
+		                        <input type="text" class="form-control" name="phone_1" id="phone_1" required tabindex=10>
 		                    </div>
 		                    <div class="col-xs-6">
 		                        <label for="schedule_1">Horaire <span class="red">*</span></label> 
-		                    	<select  id="schedule_1" name="schedule_1" class="form-control" tabindex=11 required>
+		                    	<select  id="schedule_1" name="schedule_1" class="form-control" required tabindex=11>
 		                    		<option value="">Horaire</option>
 		                    		<option value="Matin">Matin</option>
 		                    		<option value="Après-midi">Après-midi</option>
@@ -86,11 +86,11 @@ function front_create_post_view() {
 		                    </div>
 		                    <div class="col-xs-6">
 		                        <label for="phone_2">Téléphone 2 <span class="red">*</span></label>
-		                        <input type="text" class="form-control" name="phone_2" id="phone_2" tabindex=12>
+		                        <input type="text" class="form-control" name="phone_2" id="phone_2" required tabindex=12>
 		                    </div>
 		                    <div class="col-xs-6">
 		                        <label for="schedule_2">Horaire <span class="red">*</span></label> 
-		                    	<select  id="schedule_2" name="schedule_2" class="form-control" tabindex=13 required>
+		                    	<select  id="schedule_2" name="schedule_2" class="form-control" required tabindex=13>
 		                    		<option value="">Horaire</option>
 		                    		<option value="Matin">Matin</option>
 		                    		<option value="Après-midi">Après-midi</option>
@@ -100,7 +100,7 @@ function front_create_post_view() {
 		                    </div>
 		                    <div class="col-xs-6">
 		                        <label for="expiration">Expiration  <span class="red">*</span></label> 
-		                    	<select  id="expiration" name="expiration" class="form-control" tabindex=13 required>
+		                    	<select  id="expiration" name="expiration" class="form-control" required tabindex=13>
 		                    		<option value="">Expiration</option>
 		                    		<option value="30">30 Jours</option>
 		                    		<option value="60">60 Jours</option>
@@ -111,7 +111,7 @@ function front_create_post_view() {
                     			<div class="checkbox">
 								    <h3>conditions d'utilisation</h3>
 								    <label>
-								      	<input type="checkbox" name="thisok" required="" tabindex=14> 
+								      	<input type="checkbox" name="thisok" value="ok" required tabindex=14> 
                     					J'accepte les conditions d'utilisation et certifie par la présente que je suis d'âge légal dans ma juridiction et que j'ai créé ce profil de ma propre initiative, libre de toute pression extérieure et que je n'offrirai aucun service qui serait contraire aux lois locales.
 								    </label>
 								</div>

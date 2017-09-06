@@ -1,6 +1,12 @@
 <?php 
 
 function front_create_post_model(){
+
+	
+
+
+
+
 	// if the submit button is clicked, send the email
 	if ( isset( $_POST['send'] ) ){
 

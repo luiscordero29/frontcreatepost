@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 function front_create_post_view() {
 	?>
 		<section id="front_create_post_view" class="front_create_post">
-			<form action="" method="post">
+			<form action="" id="front_create_post_form" method="POST">
                 <div class="row">
                 	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                         <div class="row">
@@ -118,7 +118,8 @@ function front_create_post_view() {
                     		</div>							
                     		<div class="col-xs-12">
 		                        <button type="submit" class="btn btn-default" tabindex=15>Publier cette annonce</button>
-		                        <input type="hidden" name="send" value="send">
+		                        <input type="hidden" id="send" name="send" value="send">
+		                        <input type="hidden" id="ajax_url" name="ajax_url" value="<?php echo admin_url( 'admin-ajax.php' ); ?>">
 		                    </div>
                         </div>
                     </div>
